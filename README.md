@@ -47,6 +47,6 @@ We chose to blend tradition with tech: recreating the nostalgic Indian game of A
 
 ## 👨‍💻 Made By
 
-- Shresth Raj (Team: SoundSync)
+- Shresth Raj (Team: Innovex)
 
 ---
