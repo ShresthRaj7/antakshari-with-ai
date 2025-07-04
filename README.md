@@ -16,7 +16,7 @@ A fun turn-based music game where you play Antakshari against an AI powered by t
 
 ## 🔗 Live Demo
 
-👉 [Live Hosted Link](https://your-netlify-link.netlify.app)
+👉 [Live Hosted Link](https://68683d96d9eff3fb118ec8bf--antakshari-with-ai.netlify.app/)
 
 ---
 
