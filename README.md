@@ -50,6 +50,6 @@ We chose to blend tradition with tech: recreating the nostalgic Indian game of A
 - Shresth Raj  
 - Shalini Singh  
 - Harshada Agrawal  
-(Team Name: SoundSync)
+(Team Name: Innovex)
 
 ---
