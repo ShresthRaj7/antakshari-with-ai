@@ -58,4 +58,4 @@ Antakshari with AI is an interactive web-based music game where players challeng
 
 ## 🌐 Live Website
 
-[https://your-live-link.netlify.app](https://your-live-link.netlify.app)
+[https://antaksharigame.netlify.app/](https://antaksharigame.netlify.app/)
