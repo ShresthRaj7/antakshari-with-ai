@@ -7,22 +7,18 @@ Antakshari with AI is an interactive web-based music game where players challeng
 ## 🚀 Features Implemented
 
 ### 🟢 Easy Level
-
 - 🎨 Dark Mode Support  
 - ⏳ Custom Loading States  
 - 💡 Creative Error Handling  
 
 ### 🟠 Medium Level
-
 - 🌐 Multilingual UI Support  
 
 ### 🔴 Hard Level
-
 - 🎙️ Voice Navigation  
 - 🗣️ Text-to-Speech  
 
 ### ⚙️ Additional Features
-
 - 📜 Game History Log  
 - ⏰ Turn Timer  
 - 🧠 Spotify-Powered AI  
@@ -40,10 +36,17 @@ Antakshari with AI is an interactive web-based music game where players challeng
 
 ## 🖼️ Screenshots
 
-![Landing Page](assets/screenshots/landing-page.png)  
-![Game Interface](assets/screenshots/game-interface.png)  
-![Voice Input](assets/screenshots/voice-input.png)  
-![Result Page](assets/screenshots/result-page.png)  
+### 🟢 Landing Page  
+![Landing Page](assets/screenshots/landing-page.png)
+
+### 🎮 Game Interface  
+![Game Interface](assets/screenshots/game-interface.png)
+
+### 🎙️ Voice Input  
+![Voice Input](assets/screenshots/voice-input.png)
+
+### 📊 Result Page  
+![Result Page](assets/screenshots/result-page.png)
 
 ---
 
