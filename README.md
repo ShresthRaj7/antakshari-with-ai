@@ -4,13 +4,37 @@ A fun turn-based music game where you play Antakshari against an AI powered by t
 
 ---
 
-## 🚀 Features
+🚀 Features Implemented
+🟢 Easy Level
+🎨 Dark Mode Support
+The game supports light/dark themes. The preference is saved using localStorage and applied across pages.
 
-- Player inputs a song title
-- Game extracts last letter of the song
-- AI uses Spotify API to find a real song starting with that letter
-- Game continues turn-by-turn
-- Log shows full history of the match
+⏳ Custom Loading States
+During Spotify API requests and AI thinking, a loading animation (e.g. dots / spinner) is displayed to show real-time feedback to the user.
+
+💡 Creative Error Handling
+If Spotify returns no matching songs, a fun popup informs the player (instead of crashing or freezing).
+
+🟠 Medium Level
+🌐 Multilingual UI Support
+A dropdown lets users choose their UI language (e.g., English / Hindi). Labels, buttons, and helper text update dynamically.
+
+🔴 Hard Level
+🎙️ Voice Navigation & Accessibility
+The game supports voice input using the Web Speech API, allowing users to speak their song name instead of typing.
+
+🗣️ Text-to-Speech
+AI replies and game prompts are also read out loud using the SpeechSynthesis API for a more interactive experience.
+
+⚙️ Additional Features (Core Game)
+📜 Game History Log
+A dynamic list tracks and displays all songs played by both the player and AI.
+
+⏰ Turn Timer
+Each player gets 30 seconds. If no input is received, the game ends and shows the result screen automatically.
+
+🧠 Spotify-Powered AI
+The AI pulls real song suggestions using the Spotify API, matching the last letter of the previous song.
 
 ---
 
