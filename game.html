@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Antakshari Game 🎵</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Audiowide:wght@400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/game.css">
+    <link rel="stylesheet" href="css/colorblind-mode.css">
+</head>
+<body>
+  
+    <div class="game-container">
+        <!-- Header -->
+        <header class="game-header">
+            <div class="player-info">
+                <span id="playerName">Player</span>
+                <span class="score" id="playerScore">0</span>
+            </div>
+            <div class="vs">VS</div>
+            <div class="ai-info">
+                <span>AI 🤖</span>
+                <span class="score" id="aiScore">0</span>
+            </div>
+        </header> 
+
+
+        <!-- Turn Indicator -->
+        <div class="turn-indicator">
+            <div id="turnDisplay">Your Turn!</div>
+            <div class="timer">
+                <div class="timer-circle">
+                    <span id="timerText">30</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Current Letter Display -->
+        <div class="current-letter">
+            <span>Next song should start with:</span>
+            <div class="letter" id="currentLetter">A</div>
+        </div>
+
+        <!-- Game Input Section -->
+        <div class="game-input" id="gameInput">
+            <input type="text" id="songInput" placeholder="Enter song name..." maxlength="100">
+            <button id="submitBtn" class="btn btn-primary">🎵 Submit</button>
+        </div>
+
+        <!-- AI Thinking Animation -->
+        <div class="ai-thinking" id="aiThinking">
+            <div class="thinking-dots">
+                <span>AI is thinking</span>
+                <div class="dots">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Last Played Song -->
+        <div class="last-played" id="lastPlayed">
+            <h3>🎵 Last Played Song</h3>
+            <div class="song-card" id="songCard">
+                <div class="song-info">
+                    <div class="song-title">Welcome to Antakshari!</div>
+                    <div class="song-artist">Let's start the game</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Song History -->
+        <div class="song-history">
+            <h3>🎼 Song History</h3>
+            <div class="history-list" id="historyList">
+                <p class="no-history">No songs played yet...</p>
+            </div>
+        </div>
+
+        <!-- Game Controls -->
+        <div class="game-controls">
+            <button id="endGameBtn" class="btn btn-danger">🏁 End Game</button>
+            <button id="restartBtn" class="btn btn-secondary">🔄 Restart</button>
+        </div>
+    </div>
+
+    <!-- Toast Notifications -->
+    <div id="toast" class="toast"></div>
+
+    <script src="js/game.js"></script>
+    <script src="js/translation.js"></script>
+     <script src="js/main.js"></script>
+     <script src="js/colorblind-mode.js"></script>
+     
+</body>
+</html>

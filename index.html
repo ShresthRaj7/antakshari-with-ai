@@ -1,23 +1,120 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Antakshari with AI</title>
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Antakshari with AI 🎵</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Audiowide:wght@400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+     <link rel="stylesheet" href="css/loading.css">
+       <link rel="stylesheet" href="css/colorblind-mode.css">
+
+
 </head>
 <body>
-  <div class="container">
-    <h1>Antakshari with AI</h1>
 
-    <!-- Player Input -->
-    <input type="text" id="playerSong" placeholder="Enter your song title" />
-    <button onclick="handlePlayerTurn()">Submit Song</button>
+<!-- Loading Screen -->
+    <div id="loadingScreen" class="loading-screen">
+        <div class="loading-content">
+            <div class="loading-logo">🎵</div>
+            <div class="loading-text" data-translate="loading-title">Antakshari with AI</div>
+            <div class="loading-spinner">
+                <div class="vinyl-loader">
+                    <div class="vinyl-center"></div>
+                </div>
+            </div>
+            <div class="loading-status" id="loadingStatus" data-translate="loading-status">🎧 Tuning the notes...</div>
+        </div>
+    </div>
 
-    <!-- Game Log -->
-    <div id="gameLog" class="log-box"></div>
-  </div>
 
-  <script src="script.js"></script>
+
+ <!-- Main App -->
+    <div id="app" class="app hidden">
+        <!-- Navigation -->
+        <nav class="navbar">
+            <div class="nav-brand">
+                <span class="brand-icon">🎵</span>
+                <span class="brand-text" data-translate="app-title">Antakshari with AI</span>
+            </div>
+            <div class="nav-actions">
+                <!-- Language Selector -->
+                 <div id="google_translate_element"></div>
+                
+                <!-- Accessibility Options -->
+                <div class="accessibility-controls">
+                    <button id="voiceToggle" class="nav-btn" title="Voice Navigation">
+                        <span class="icon">🎤</span>
+                    </button>
+                    <button id="narratorToggle" class="nav-btn" title="Narrator">
+                        <span class="icon">🔊</span>
+                    </button>
+                    <button id="colorblindToggle" class="nav-btn" title="Colorblind Mode">
+                        <span class="icon">👁️</span>
+                    </button>
+                </div>
+
+            </div>
+        </nav>
+
+    <div class="container">
+        <!-- Floating Music Notes Animation -->
+        <div class="music-notes">
+            <div class="note">♪</div>
+            <div class="note">♫</div>
+            <div class="note">♪</div>
+            <div class="note">♬</div>
+            <div class="note">♫</div>
+        </div>
+
+        <!-- Main Content -->
+        <div class="main-content">
+            <h1 class="title">🎤 Antakshari with AI 🤖</h1>
+            <p class="subtitle">Challenge the AI in the ultimate music game!</p>
+            
+            <div class="player-input">
+
+
+                <input type="text" id="playerName" placeholder="Enter your name" maxlength="20">
+            </div>
+
+            <div class="buttons">
+                <button class="btn btn-primary" id="startBtn">🎵 Start Game</button>
+                <button class="btn btn-secondary" id="instructionsBtn">📖 How to Play</button>
+             
+
+
+            <div class="theme-toggle">
+                <button id="themeToggle" class="theme-btn">🌙</button>
+            </div>
+        </div>
+
+        <!-- Instructions Modal -->
+        <div id="instructionsModal" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <h2>🎵 How to Play Antakshari</h2>
+                <div class="instructions">
+                    <p><strong>Rules:</strong></p>
+                    <ul>
+                        <li>🎯 Take turns naming songs with the AI</li>
+                        <li>🔤 Each song must start with the last letter of the previous song</li>
+                        <li>⏰ You have 30 seconds per turn</li>
+                        <li>🚫 No repeating songs</li>
+                        <li>🏆 First to run out of songs loses!</li>
+                    </ul>
+                    <p><strong>Example:</strong></p>
+                    <p>Song: "Hello" → Next song starts with "O" → "Over the Rainbow"</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/main.js"></script>
+    <script src="js/translation.js"></script>
+    <script src="js/voice.js"></script>
+     <script src="js/colorblind-mode.js"></script>
 </body>
 </html>

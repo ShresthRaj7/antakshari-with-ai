@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game Results 🏆</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Audiowide:wght@400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/result.css">
+    <link rel="stylesheet" href="css/colorblind-mode.css">
+</head>
+<body>
+    <div class="result-container">
+        <!-- Confetti Animation -->
+        <div class="confetti" id="confetti"></div>
+
+        <!-- Result Content -->
+        <div class="result-content">
+            <div class="result-icon" id="resultIcon">🏆</div>
+            <h1 class="result-title" id="resultTitle">Congratulations!</h1>
+            <p class="result-message" id="resultMessage">You won the game!</p>
+
+            <!-- Score Display -->
+            <div class="score-display">
+                <div class="score-item">
+                    <span class="score-label" id="playerNameDisplay">Player</span>
+                    <span class="score-value" id="finalPlayerScore">0</span>
+                </div>
+                <div class="vs">VS</div>
+                <div class="score-item">
+                    <span class="score-label">AI 🤖</span>
+                    <span class="score-value" id="finalAiScore">0</span>
+                </div>
+            </div>
+
+            <!-- Game Stats -->
+            <div class="game-stats">
+                <h3>📊 Game Statistics</h3>
+                <div class="stats-grid">
+                    <div class="stat-item">
+                        <span class="stat-value" id="totalSongs">0</span>
+                        <span class="stat-label">Total Songs</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-value" id="gameDuration">0:00</span>
+                        <span class="stat-label">Game Duration</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-value" id="averageTime">0s</span>
+                        <span class="stat-label">Avg. Response Time</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Action Buttons -->
+            <div class="action-buttons">
+                <button id="playAgainBtn" class="btn btn-primary">🎵 Play Again</button>
+                <button id="homeBtn" class="btn btn-secondary">🏠 Home</button>
+                <button id="shareBtn" class="btn btn-accent">📤 Share Result</button>
+            </div>
+
+            <div class="theme-toggle">
+                <button id="themeToggle" class="theme-btn">🌙</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/result.js"></script>
+    <script src="js/translation.js"></script>
+    <script src="js/colorblind-mode.js"></script>
+</body>
+</html>

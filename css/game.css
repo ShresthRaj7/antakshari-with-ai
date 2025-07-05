@@ -1,0 +1,475 @@
+/* Game Specific Styles */
+.game-container {
+  min-height: 100vh;
+  padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Header */
+.game-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: var(--card-bg);
+  padding: 1.5rem;
+  border-radius: 15px;
+  margin-bottom: 2rem;
+  box-shadow: var(--shadow);
+  backdrop-filter: blur(10px);
+  border: 1px solid var(--border-color);
+  position: relative;
+}
+
+.player-info,
+.ai-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.player-info span:first-child,
+.ai-info span:first-child {
+  font-weight: 600;
+  font-size: 1.1rem;
+  color: var(--text-primary);
+}
+
+.score {
+  background: var(--primary-gradient);
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  font-weight: bold;
+  min-width: 40px;
+  text-align: center;
+}
+
+.vs {
+  font-family: "Audiowide", cursive;
+  font-size: 1.5rem;
+  background: var(--secondary-gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  font-weight: bold;
+}
+
+/* Turn Indicator */
+.turn-indicator {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: var(--card-bg);
+  padding: 1.5rem;
+  border-radius: 15px;
+  margin-bottom: 2rem;
+  box-shadow: var(--shadow);
+  backdrop-filter: blur(10px);
+  border: 1px solid var(--border-color);
+}
+
+#turnDisplay {
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  animation: pulse 2s ease-in-out infinite;
+}
+
+@keyframes pulse {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.7;
+  }
+}
+
+.timer {
+  position: relative;
+}
+
+.timer-circle {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: var(--accent-gradient);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-weight: bold;
+  font-size: 1.2rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.timer-circle::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: conic-gradient(from 0deg, transparent 0deg, rgba(255, 255, 255, 0.3) 360deg);
+  animation: timerSpin 30s linear;
+}
+
+@keyframes timerSpin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Current Letter */
+.current-letter {
+  text-align: center;
+  background: var(--card-bg);
+  padding: 1.5rem;
+  border-radius: 15px;
+  margin-bottom: 2rem;
+  box-shadow: var(--shadow);
+  backdrop-filter: blur(10px);
+  border: 1px solid var(--border-color);
+}
+
+.current-letter span {
+  display: block;
+  color: var(--text-secondary);
+  margin-bottom: 1rem;
+  font-size: 1.1rem;
+}
+
+.letter {
+  font-size: 4rem;
+  font-weight: bold;
+  background: var(--primary-gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  font-family: "Audiowide", cursive;
+  animation: letterBounce 2s ease-in-out infinite;
+}
+
+@keyframes letterBounce {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+}
+
+/* Game Input */
+.game-input {
+  display: flex;
+  gap: 1rem;
+  background: var(--card-bg);
+  padding: 1.5rem;
+  border-radius: 15px;
+  margin-bottom: 2rem;
+  box-shadow: var(--shadow);
+  backdrop-filter: blur(10px);
+  border: 1px solid var(--border-color);
+}
+
+#songInput {
+  flex: 1;
+  padding: 1rem;
+  border: 2px solid transparent;
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.1);
+  color: var(--text-primary);
+  font-size: 1rem;
+  transition: all 0.3s ease;
+}
+
+#songInput:focus {
+  outline: none;
+  border: 2px solid;
+  border-image: var(--primary-gradient) 1;
+  transform: translateY(-2px);
+}
+
+#submitBtn {
+  padding: 1rem 2rem;
+  white-space: nowrap;
+}
+
+/* AI Thinking */
+.ai-thinking {
+  display: none;
+  text-align: center;
+  background: var(--card-bg);
+  padding: 2rem;
+  border-radius: 15px;
+  margin-bottom: 2rem;
+  box-shadow: var(--shadow);
+  backdrop-filter: blur(10px);
+  border: 1px solid var(--border-color);
+}
+
+.thinking-dots {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  color: var(--text-secondary);
+  font-size: 1.1rem;
+}
+
+.dots {
+  display: flex;
+  gap: 0.3rem;
+}
+
+.dots span {
+  width: 8px;
+  height: 8px;
+  background: var(--primary-gradient);
+  border-radius: 50%;
+  animation: dotPulse 1.4s ease-in-out infinite both;
+}
+
+.dots span:nth-child(1) {
+  animation-delay: -0.32s;
+}
+.dots span:nth-child(2) {
+  animation-delay: -0.16s;
+}
+.dots span:nth-child(3) {
+  animation-delay: 0s;
+}
+
+@keyframes dotPulse {
+  0%,
+  80%,
+  100% {
+    transform: scale(0);
+    opacity: 0.5;
+  }
+  40% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+/* Last Played Song */
+.last-played {
+  background: var(--card-bg);
+  padding: 1.5rem;
+  border-radius: 15px;
+  margin-bottom: 2rem;
+  box-shadow: var(--shadow);
+  backdrop-filter: blur(10px);
+  border: 1px solid var(--border-color);
+}
+
+.last-played h3 {
+  color: var(--text-primary);
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.song-card {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  background: rgba(255, 255, 255, 0.1);
+  padding: 1rem;
+  border-radius: 10px;
+  transition: all 0.3s ease;
+  animation: slideIn 0.5s ease-out;
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.song-card:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow);
+}
+
+.album-art {
+  width: 60px;
+  height: 60px;
+  border-radius: 8px;
+  background: var(--primary-gradient);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 1.5rem;
+  flex-shrink: 0;
+}
+
+.song-info {
+  flex: 1;
+}
+
+.song-title {
+  font-weight: 600;
+  color: var(--text-primary);
+  margin-bottom: 0.3rem;
+  font-size: 1.1rem;
+}
+
+.song-artist {
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+}
+
+.play-btn {
+  background: var(--accent-gradient);
+  border: none;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  color: white;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.play-btn:hover {
+  transform: scale(1.1);
+}
+
+/* Song History */
+.song-history {
+  background: var(--card-bg);
+  padding: 1.5rem;
+  border-radius: 15px;
+  margin-bottom: 2rem;
+  box-shadow: var(--shadow);
+  backdrop-filter: blur(10px);
+  border: 1px solid var(--border-color);
+}
+
+.song-history h3 {
+  color: var(--text-primary);
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.history-list {
+  max-height: 200px;
+  overflow-y: auto;
+}
+
+.history-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.8rem;
+  margin-bottom: 0.5rem;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+.history-item:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.history-song {
+  font-weight: 500;
+  color: var(--text-primary);
+}
+
+.history-player {
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  padding: 0.2rem 0.8rem;
+  border-radius: 15px;
+  background: var(--primary-gradient);
+  color: white;
+}
+
+.no-history {
+  text-align: center;
+  color: var(--text-secondary);
+  font-style: italic;
+}
+
+/* Game Controls */
+.game-controls {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .game-container {
+    padding: 15px;
+  }
+
+  .game-header {
+    padding: 1rem;
+  }
+
+  .vs {
+    font-size: 1.2rem;
+  }
+
+  .turn-indicator {
+    flex-direction: column;
+    gap: 1rem;
+    text-align: center;
+  }
+
+  .letter {
+    font-size: 3rem;
+  }
+
+  .game-input {
+    flex-direction: column;
+  }
+
+  .game-controls {
+    flex-direction: column;
+  }
+
+  .song-card {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .game-header {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .player-info,
+  .ai-info {
+    flex-direction: row;
+    gap: 1rem;
+  }
+
+  .letter {
+    font-size: 2.5rem;
+  }
+
+  .timer-circle {
+    width: 50px;
+    height: 50px;
+    font-size: 1rem;
+  }
+}

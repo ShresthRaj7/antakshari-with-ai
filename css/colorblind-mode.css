@@ -1,0 +1,17 @@
+body.colorblind-mode {
+  --primary: #0072b2;
+  --primary-gradient: linear-gradient(90deg, #0072b2, #56b4e9);
+  --accent-gradient: linear-gradient(90deg, #e69f00, #f0e442);
+  --card-bg: #fff;
+  --text-primary: #222;
+  --text-secondary: #444;
+  --border-color: #bdbdbd;
+  --shadow: 0 2px 8px rgba(34, 34, 34, 0.05);
+}
+
+.nav-btn#colorblindToggle.active {
+  background: #ffd600;
+  color: #222;
+  border: 2px solid #ff9100;
+  box-shadow: 0 0 0 3px #ffe08288;
+}
